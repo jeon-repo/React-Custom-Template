@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import { test, expect } from 'jest';
+import App from 'app/App';
 
 test('renders learn react link', () => {
   render(<App />);

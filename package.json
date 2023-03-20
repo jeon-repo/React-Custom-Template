@@ -3,18 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "cross-env": "^7.0.3",
+    "history": "5.3.0",
+    "lodash": "^4.17.21",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "8.0.5",
+    "react-router-dom": "6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "redux-logger": "3.0.6",
+    "redux-persist": "6.0.0",
+    "web-vitals": "2.1.4",
+    "yup": "1.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env cross-env REACT_APP_MODE=development react-scripts start",
+    "build": "env-cmd -f .env cross-env REACT_APP_MODE=production react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +46,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.4"
   }
 }

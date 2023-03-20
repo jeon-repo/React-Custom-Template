@@ -1,0 +1,72 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "jsx": true,
+      "destructuring": true,
+      "spread": true,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["import", "react", "prettier"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], "internal", ["parent", "sibling"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "after"
+          },
+          {
+            "pattern": "react-dom",
+            "group": "builtin",
+            "position": "after"
+          },
+          {
+            "pattern": "react-router-dom",
+            "group": "builtin",
+            "position": "after"
+          }
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-import-module-exports": "off",
+    "prettier/prettier": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/function-component-definition": "off",
+    "react/display-name": "off",
+    "import/no-unresolved": "off",
+    "no-unused-vars": "off",
+    "no-console": 0,
+    "global-require": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-param-reassign": "off", // mutating redux state in redux-toolkit.
+    "no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off", // after react v17
+    "react/jsx-props-no-spreading": "off"
+  }
+}
