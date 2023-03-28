@@ -34,6 +34,9 @@ src
         ----index.jsx     : 메인 화면 UI
         ----mainConfig.js : 화면별 라우팅 정의
     ---sub  : 서브 화면
+        ----store
+          -----index.js
+          -----subSlice.js : 서브 화면에 동적 리듀싱 되어있는 redux slice
         ----index.jsx
         ----subConfig.js
   --shared-components : 공용 컴포넌트
@@ -41,6 +44,8 @@ src
     ---index.js          : store, redux-persist 정의
     ---rememeberSlice.js : redux slice 파일
     ---rootReducer.js    : root reducer 정의, redux-persist 설정
+    ---userSlice.js      : 기본 유저 redux slice 파일
+    ---withReducer.js    : dynamic reducer 기능
   --test : 테스트 코드
 -styles : 전역 css
 -utils  : 모듈형 기능
