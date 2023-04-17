@@ -1,7 +1,6 @@
 # 리액트-커스텀-템플릿
 
-<img src="https://img.shields.io/badge/License-MIT-brightgreen">
-<img src="https://img.shields.io/badge/Author-jeon--repo-blue">
+<img src="https://img.shields.io/badge/Author-jeon--repo-blue"> <img src="https://img.shields.io/badge/License-MIT-brightgreen">
 
 ---
 ### 브랜치 타입
