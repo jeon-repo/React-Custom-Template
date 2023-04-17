@@ -1,4 +1,4 @@
-# React-Custom-Templete
+# React-Custom-Templete2
 
 <img src="https://img.shields.io/badge/Author-jeon--repo-blue"> <img src="https://img.shields.io/badge/License-MIT-brightgreen">
 
