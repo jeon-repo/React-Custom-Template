@@ -58,4 +58,4 @@ src
 ### Authors
 © 2023 jeon-repo <<jano.jeon@gmail.com>>
 ### License
-Base-React-Templete is [MIT licensed](https://github.com/jeon-repo/Base-React-Template/blob/master/license.md).
+React-Custom-Template is [MIT licensed](https://github.com/jeon-repo/React-Custom-Template/blob/master/license.md).
