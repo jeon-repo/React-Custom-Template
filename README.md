@@ -7,7 +7,7 @@
 ---
 ### Branch Type
 by default redux, redux-persist, and redux-toolkit are applied.
-- master : a branch where the UI library is not applied (only tailwindcss is applied)
+- master : a branch where the UI Framework is not applied (only tailwindcss is applied)
 
 ### Configuration (.env)
 - PORT : port settings
