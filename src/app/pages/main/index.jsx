@@ -1,4 +1,5 @@
 import TextInput from 'app/shared-components/input/TextInput';
+import { openDialog } from 'app/store/dialogSlice';
 import { setRemember } from 'app/store/rememberSlice';
 import withRouter from 'app/util/withRouter';
 import { useState } from 'react';
@@ -28,6 +29,11 @@ function Main({ navigate }) {
         type='button'
         onClick={() => {
           dispatch(setRemember(text));
+          dispatch(
+            openDialog({
+              content: '내용1',
+            }),
+          );
         }}>
         저장
       </button>
