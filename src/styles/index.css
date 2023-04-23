@@ -5,7 +5,7 @@ html {
 body {
   margin: 0px;
   height: 100%;
-  padding: 2rem;
+  padding: 0px;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--surface-ground);

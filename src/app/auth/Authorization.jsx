@@ -1,11 +1,12 @@
 import AppContext from "app/AppContext";
+import defineConfig from "app/config/defineConfig";
 import settingsConfig from "app/config/settingsConfig";
 import withRouter from "app/util/withRouter";
 import { Component } from "react";
 import { matchRoutes } from "react-router-dom";
 import Utils from "utils/common/utils";
 
-const isAuthMode = process.env.REACT_APP_AUTH_MODE === 'on';
+const { isAuthMode } = defineConfig;
 let mainRedirectUrl = null;
 
 class Authorization extends Component {
