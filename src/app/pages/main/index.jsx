@@ -17,7 +17,12 @@ function Main({ navigate }) {
       <h4 className='text-caption xs:text-h3 fhd:text-h4'>h4</h4>
       <h5 className='text-caption xs:text-h2 fhd:text-h5'>h5</h5>
       <h6 className='text-caption xs:text-h1 fhd:text-h6'>h6</h6>
-      <TextInput className="w-full min-w-screen border-2 border-black border-solid" maxLength={10} value={text} onChange={(e) => setText(e.target.value)} />
+      <TextInput
+        className='w-full min-w-screen border-2 border-black border-solid'
+        maxLength={10}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
       <button
         className='mt-20 w-[10rem] border-2 border-black border-dashed outline outline-2 outline-red-500'
         type='button'
