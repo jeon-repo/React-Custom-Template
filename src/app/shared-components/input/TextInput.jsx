@@ -1,13 +1,23 @@
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+
 function TextInput(props) {
-  const { maxLength = null, className, helperText, helperSx, align, ...others } = props;
+  const { maxLength = null, className, helperText, helperSx, align, variant, ...others } = props;
 
   return (
-    <input
+    <FormControl variant={variant} error={others.error} fullWidth={others.fullWidth}>
+      <TextField
         {...others}
-        maxLength={maxLength}
-        className={`${className}`}
-        style={{ textAlign: align }}
+        inputProps={{ maxLength }}
+        variant={variant}
+        className={className}
+        sx={{ textAlign: align }}
       />
+      <FormHelperText id='error-text' sx={{ width: helperSx || '100%' }}>
+        {helperText}
+      </FormHelperText>
+    </FormControl>
   );
 }
 

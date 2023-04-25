@@ -1,31 +1,43 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+import { DialogActions, DialogContent, DialogTitle } from '@mui/material';
+import Dialog from '@mui/material/Dialog';
 import { closeDialog, getDialogOptions, getDialogState } from 'app/store/dialogSlice';
+import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PButton from '../button/PButton';
 
-function DialogLayout() {
+function DialogLayout(props) {
+  const { className } = props;
   const dispatch = useDispatch();
   const state = useSelector(getDialogState);
-  const { content } = useSelector(getDialogOptions);
+  const options = useSelector(getDialogOptions);
+
+  const onClose = useCallback(() => {
+    dispatch(closeDialog());
+  }, [dispatch]);
 
   return (
-    <div style={{ display: state ? 'block' : 'none' }}>
-      <div
-        style={{
-          position: 'fixed',
-          backgroundColor: 'transparent',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 0,
-          width: '100vw',
-          height: '100vh',
-        }}
-        onClick={() => dispatch(closeDialog())}
-      />
-      <div>{content}</div>
-    </div>
+    <Dialog
+      open={state}
+      onClose={onClose}
+      className={className}
+      scroll={options.scroll}
+      {...options}>
+      <DialogTitle className='w-100 h-100' onClose={null}>
+        {options.title}
+      </DialogTitle>
+      <DialogContent className='w-100 h-100'>{options.content}</DialogContent>
+      <DialogActions>
+        {options.event.map((e, idx) => (
+          <PButton
+            key={e.title}
+            text={e.title}
+            onClick={e.onClick === 'close' ? onClose : e.onClick}
+          />
+        ))}
+      </DialogActions>
+    </Dialog>
   );
 }
 
