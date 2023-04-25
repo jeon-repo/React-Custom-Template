@@ -7,7 +7,7 @@ const initialState = {
     title: '제목',
     content: '내용',
     children: null,
-    event: null,
+    event: [],
   },
   datas: null,
 };

@@ -32,6 +32,18 @@ function Main({ navigate }) {
           dispatch(
             openDialog({
               content: '내용1',
+              event: [
+                {
+                  title: '버튼1',
+                  onClick: 'close',
+                },
+                {
+                  title: '버튼2',
+                  onClick: () => {
+                    alert('1234');
+                  },
+                },
+              ],
             }),
           );
         }}>
