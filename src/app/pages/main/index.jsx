@@ -5,6 +5,7 @@ import withRouter from 'app/util/withRouter';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Button } from 'antd';
+import PButton from 'app/shared-components/button/PButton';
 
 function Main({ navigate }) {
   const dispatch = useDispatch();
@@ -25,10 +26,21 @@ function Main({ navigate }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-
       <Button
-        className='mt-20 w-[10rem] border-2 border-black border-dashed outline outline-2 outline-red-500'
-        type='primary'
+        className='mt-20 w-[10rem] h-[10rem]'
+        variant='contained'
+        onClick={() => {
+          dispatch(setRemember(text));
+          dispatch(
+            openDialog({
+              content: '내용1',
+            }),
+          );
+        }}>
+        저장
+      </Button>
+      <PButton
+        text='test'
         onClick={() => {
           dispatch(setRemember(text));
           dispatch(
@@ -48,9 +60,8 @@ function Main({ navigate }) {
               ],
             }),
           );
-        }}>
-        저장
-      </Button>
+        }}
+      />
       <br />
       <button type='button' onClick={() => navigate('/sub')}>
         서브로 이동
