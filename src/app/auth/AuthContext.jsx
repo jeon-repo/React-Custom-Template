@@ -1,4 +1,5 @@
 import { rememberTitle } from 'app/store/rememberSlice';
+import apiService from 'utils/api/apiService';
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -10,6 +11,7 @@ function AuthProvier({ children }) {
   const [waitAuthCheck, setWaitAuthCheck] = useState(true);
 
   useEffect(() => {
+    apiService.init();
     setIsAuthenticated(true);
     setWaitAuthCheck(false);
   }, []);

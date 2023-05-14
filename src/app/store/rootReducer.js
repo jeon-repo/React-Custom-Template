@@ -2,6 +2,7 @@ import { persistReducer } from 'redux-persist';
 import { combineReducers } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import user from './userSlice';
+import dialog from './dialogSlice';
 import remember from './rememberSlice';
 
 // default: local storage
@@ -18,6 +19,7 @@ const createReducer = (asyncReducers) => (state, action) => {
     persistConfig,
     combineReducers({
       user,
+      dialog,
       remember,
       ...asyncReducers,
     }),

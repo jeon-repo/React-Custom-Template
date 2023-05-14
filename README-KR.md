@@ -5,7 +5,8 @@
 ---
 ### 브랜치 타입
 기본적으로 redux, redux-persist, redux-toolkit 적용
-1. master : UI 라이브러리가 적용되어있지 않음 (tailwindcss만 적용)
+- master : UI 프레임워크가 적용되어있지 않은 브랜치 (tailwindcss만 적용)
+- material-ui/js : material-ui 프레임워크가 적용된 브랜치
 
 ### 설정 (.env)
 - PORT : 포트 설정
