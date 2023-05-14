@@ -3,6 +3,7 @@ import routes from 'app/config/routesConfig';
 import store, { persistor } from 'app/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import AntdTheme from 'app/layout/AntdTheme';
 
 const withAppProviders = (Component) => (props) => {
   const WrapperComponent = () => (
@@ -12,7 +13,9 @@ const withAppProviders = (Component) => (props) => {
       }}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Component {...props} />
+          <AntdTheme>
+            <Component {...props} />
+          </AntdTheme>
         </PersistGate>
       </Provider>
     </AppContext.Provider>
