@@ -5,6 +5,10 @@
 
 
 ---
+### Sumarry
+Support initial setup of which is the biggest challenge for beginner development.  
+Support for initial setup of React based design libraries.
+
 ### Branch Type
 by default redux, redux-persist, and redux-toolkit are applied.
 - master : the branch where the UI Framework is not applied (only tailwindcss is applied)
