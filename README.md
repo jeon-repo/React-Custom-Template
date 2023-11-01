@@ -6,7 +6,7 @@
 
 ---
 ### Summary
-Support initial setup of which is the biggest challenge for beginner development.
+Support initial setup of which is the biggest challenge for beginner development.  
 Support for initial setup of React based design libraries.
 
 
