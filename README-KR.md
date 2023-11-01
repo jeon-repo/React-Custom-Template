@@ -3,6 +3,10 @@
 <img src="https://img.shields.io/badge/Author-jeon--repo-blue"> <img src="https://img.shields.io/badge/License-MIT-brightgreen">
 
 ---
+### 개요
+개발 초심자들의 가장 큰 어려움인 초기 세팅을 지원.  
+React 기반의 디자인 라이브러리 초기 세팅 지원.
+
 ### 브랜치 타입
 기본적으로 redux, redux-persist, redux-toolkit 적용
 - master : UI 프레임워크가 적용되어있지 않은 브랜치 (tailwindcss만 적용)
